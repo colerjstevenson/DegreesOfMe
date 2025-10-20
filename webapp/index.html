@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Actor → Movie Connection Finder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Actor → Movie Connection Finder</h1>
+
+    <div class="row">
+      <label for="actorName">Actor Name:</label>
+      <input id="actorName" type="text" placeholder="e.g. Tom Hanks">
+      <button id="findBtn">Find Connection</button>
+    </div>
+
+    <div class="row">
+      <label for="goalTitles">Goal Titles (comma separated):</label>
+      <input id="goalTitles" type="text" value="The Bad Guys 2, Ghostbusters: Frozen Empire">
+    </div>
+
+    <div class="row">
+      <label>Excluded Film IDs (ID — Title):</label>
+      <textarea id="excludedList" readonly rows="4"></textarea>
+      <button id="clearExcl">Clear Exclude List</button>
+    </div>
+
+    <div class="row">
+      <label>Result Path (click MOVIE to exclude and retry):</label>
+      <ul id="pathList"></ul>
+    </div>
+
+    <div class="row">
+      <div id="status"></div>
+    </div>
+
+    <footer>
+      <small>Note: You must provide a TMDb API key in <code>app.js</code>. The key will be visible to anyone who views the site. See README for details.</small>
+    </footer>
+  </main>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
