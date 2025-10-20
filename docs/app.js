@@ -273,7 +273,7 @@ function populatePathList(namedPath){
     left.textContent = `${ntype.toUpperCase()}: ${nm} (ID ${nid})`;
     const right = document.createElement('div');
     right.className = 'meta';
-    if (ntype === 'movie' && !goal_titles.has(nid)){
+    if (ntype === 'movie' && !goalInput.value.split(',').map(s => s.trim()).has(nm)){
       const btn = document.createElement('button');
       btn.textContent = 'Exclude & Retry';
       btn.addEventListener('click', async () =>{
